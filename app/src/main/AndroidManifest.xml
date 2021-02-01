@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amr.randomlyaskme">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RandomlyAskMe">
+        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".AddQuestionActivity" />
+        <activity android:name=".EditQuestionActivity" />
+        <activity
+            android:name=".ListCategory"
+            android:label="@string/title_activity_list_category"
+            android:theme="@style/Theme.RandomlyAskMe.NoActionBar" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".AddCategoryActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:process=":remote" />
+        <receiver
+            android:name=".NotificationAction"
+            android:enabled="true"
+            android:process=":remote" />
+    </application>
+
+</manifest>
